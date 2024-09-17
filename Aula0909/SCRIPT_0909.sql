@@ -1,4 +1,4 @@
-use empregados_icoma;
+use empregados_danilopereira;
 /*Select simples*/
 select * from empregado;
 /*Filtro de Estado Civil*/ 
