@@ -25,18 +25,12 @@ case
     when (emp.salario >= 2826.66 and emp.salario < 3751.06) then (emp.salario * 0.15) 
 	when (emp.salario >= 3751.07 and emp.salario < 4664.68) then (emp.salario * 0.225)
 	when (emp.salario > 4664.69) then (emp.salario * 0.275) 
-end as IRPF
-from 
-empregado emp;
-
-select emp.cod_emp as Código, 
-       emp.Nome as Nome_Empregado,
-       emp.salario as Renda,
-       case
+end as IRPF,
+	case
            when (emp.salario <= 1412) then (emp.salario * 0.075) 
            when (emp.salario >= 1412.01 and emp.salario < 2666.68) then (emp.salario * 0.09) 
            when (emp.salario >= 2666.69 and emp.salario < 4000.03) then (emp.salario * 0.12) 
            when (emp.salario >= 4000.04 and emp.salario < 7786.02) then (emp.salario * 0.14)
-           when (emp.salario > 7786.02) then (emp.salario * 0.14)
+           else 856.56
        end as INSS
 from empregado emp;
